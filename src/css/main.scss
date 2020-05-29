@@ -15,17 +15,28 @@ ul {
     list-style-type: none;
 }
 
+/* color variables */
+$dribbble-pink: #ea4c89;
+$light-grey: #F2F1F4;
+$dark-grey: #6e6d7a;
+$border-grey: #d2dbde;
+$black: #000;
+$white: #fff;
+
 /* Button styles */
 ._button {
     margin: 0;
     padding: 10px 16px;
     border-radius: 5px;
-    color: #fff;
+    color: $white;
     border: 0;
     font-size: 14px;
     // primary
     &.-primary {
-        background-color: #ea4c89;
+        background-color: $dribbble-pink;
+    }
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -55,10 +66,10 @@ header {
                     }
                     a,
                     i {
-                        color: #6e6d7a;
+                        color: $dark-grey;
                     }
                     &:last-of-type {
-                        border-left: 1px solid #d2dbde;
+                        border-left: 1px solid $border-grey;
                         padding-left: 20px;
                     }
                     &:hover {
@@ -72,7 +83,7 @@ header {
                 margin: 0 15px;
                 i,
                 a {
-                    color: #6e6d7a;
+                    color: $dark-grey;
                 }
                 a { 
                     text-decoration: none;
@@ -87,7 +98,7 @@ header {
 
 ._promo {
     height: 380px;
-    background-color: #F2F1F4;
+    background-color: $light-grey;
     > div {
         position: relative;
         max-width: 624px;
@@ -110,17 +121,17 @@ main {
             padding: 0;
             li {
                 margin: 0 15px;
-                color: #6e6d7a;
+                color: $dark-grey;
                 &.-active {
-                    background-color: #F2F1F4;
-                    color: #000;
+                    background-color: $light-grey;
+                    color: $black;
                     padding: 10px;
                     border-radius: 5px;
                     font-weight: bold;
                 }
                 &:not(.-active) {
                     &:hover {
-                        color: #000;
+                        color: $black;
                     }
                 }
                 &:hover {
@@ -135,7 +146,7 @@ main {
             ._card-body {
                 width: 275px; 
                 height: 225px;
-                background-color: #F2F1F4;
+                background-color: $light-grey;
                 border-radius: 5px;
                 &:hover {
                     cursor: pointer;

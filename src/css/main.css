@@ -15,6 +15,7 @@ ul {
   list-style-type: none;
 }
 
+/* color variables */
 /* Button styles */
 ._button {
   margin: 0;
@@ -27,6 +28,10 @@ ul {
 
 ._button.-primary {
   background-color: #ea4c89;
+}
+
+._button:hover {
+  cursor: pointer;
 }
 
 header nav {
