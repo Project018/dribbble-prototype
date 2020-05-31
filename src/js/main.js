@@ -1,10 +1,10 @@
 // fetching https://jsonplaceholder.typicode.com
 Promise.all([
     fetch("https://jsonplaceholder.typicode.com/users").then(response => response.json()),
-    fetch("https://jsonplaceholder.typicode.com/photos").then(response => response.json())
+    fetch("https://jsonplaceholder.typicode.com/photos").then(response => response.json()),
+    {mode: 'no-cors'}
 ])
   .then(data => {
-    console.log(data)
 
     // display data length cards for home screen
     const cards = document.querySelector("._cards");
