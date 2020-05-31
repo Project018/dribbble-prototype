@@ -2,7 +2,12 @@
 Promise.all([
     fetch("https://jsonplaceholder.typicode.com/users").then(response => response.json()),
     fetch("https://jsonplaceholder.typicode.com/photos").then(response => response.json()),
-    {mode: 'no-cors'}
+    { 
+        mode: 'no-cors',
+        header: {
+            'Access-Control-Allow-Origin': '*'
+        }
+    }
 ])
   .then(data => {
 
