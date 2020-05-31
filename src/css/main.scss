@@ -111,7 +111,7 @@ header {
 }
 
 main {
-    margin: 0 50px;
+    margin: 0 40px;
     ._toolbar {
         ._filters {
             display: flex;
@@ -142,14 +142,17 @@ main {
     }
     ._cards {
         display: flex;
+        flex-wrap: wrap;
         ._card {
+            margin: 2%;
             ._card-body {
-                width: 275px; 
-                height: 225px;
-                background-color: $light-grey;
-                border-radius: 5px;
                 &:hover {
                     cursor: pointer;
+                }
+                img {
+                    width: 275px;
+                    height: 225px;
+                    border-radius: 5px;
                 }
             }
             ._card-details {
@@ -161,6 +164,35 @@ main {
                     font-weight: bold;
                 }
             }
+        }
+    }
+}
+
+._modal {
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    z-index: 9997;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+    &.-open {
+        visibility: visible;
+    }
+    .fa-times {
+        position: absolute;
+        right: 0;
+        margin: 20px 20px 0 0;
+        color: $dark-grey;
+        font-size: 30px;
+        &:hover {
+            cursor: pointer;
+            color: $light-grey;
         }
     }
 }

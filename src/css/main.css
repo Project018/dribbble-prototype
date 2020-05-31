@@ -128,7 +128,7 @@ header nav ._actions ._button {
 }
 
 main {
-  margin: 0 50px;
+  margin: 0 40px;
 }
 
 main ._toolbar ._filters {
@@ -170,17 +170,22 @@ main ._cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-main ._cards ._card ._card-body {
-  width: 275px;
-  height: 225px;
-  background-color: #F2F1F4;
-  border-radius: 5px;
+main ._cards ._card {
+  margin: 2%;
 }
 
 main ._cards ._card ._card-body:hover {
   cursor: pointer;
+}
+
+main ._cards ._card ._card-body img {
+  width: 275px;
+  height: 225px;
+  border-radius: 5px;
 }
 
 main ._cards ._card ._card-details {
@@ -196,5 +201,37 @@ main ._cards ._card ._card-details {
 main ._cards ._card ._card-details span {
   margin-left: 5px;
   font-weight: bold;
+}
+
+._modal {
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 9997;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+}
+
+._modal.-open {
+  visibility: visible;
+}
+
+._modal .fa-times {
+  position: absolute;
+  right: 0;
+  margin: 20px 20px 0 0;
+  color: #6e6d7a;
+  font-size: 30px;
+}
+
+._modal .fa-times:hover {
+  cursor: pointer;
+  color: #F2F1F4;
 }
 /*# sourceMappingURL=main.css.map */
