@@ -1,7 +1,7 @@
 // fetching https://jsonplaceholder.typicode.com
 Promise.all([
-    fetch("http://jsonplaceholder.typicode.com/users").then(response => response.json()),
-    fetch("http://jsonplaceholder.typicode.com/photos").then(response => response.json())
+    fetch("https://jsonplaceholder.typicode.com/users").then(response => response.json()),
+    fetch("https://jsonplaceholder.typicode.com/photos").then(response => response.json())
 ])
   .then(data => {
     console.log(data)
