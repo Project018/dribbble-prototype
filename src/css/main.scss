@@ -146,6 +146,7 @@ main {
     }
     ._cards {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         ._card {
             margin: 2%;

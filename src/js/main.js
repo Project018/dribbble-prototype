@@ -10,6 +10,8 @@ Promise.all([
     }
 ])
   .then(data => {
+    // get 10 items from data instead of 5000
+    const images = data[1].slice(0, 10);
 
     // display data length cards for home screen
     const cards = document.querySelector("._cards");
@@ -17,7 +19,7 @@ Promise.all([
     for (let i = 0; i < data[0].length; i++) {
         cards.innerHTML += `<div id="${[i]}" class="_card">
         <div class="_card-body">
-            <img class="_image" src=${data[1][i].url} />
+            <img class="_image" src=${images[i].url} />
         </div>
         <div class="_card-details">
             <div class="_user">
