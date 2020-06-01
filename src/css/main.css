@@ -24,6 +24,7 @@ ul {
   color: #fff;
   border: 0;
   font-size: 14px;
+  background-color: #f3f3f4;
 }
 
 ._button.-primary {
@@ -184,7 +185,7 @@ main ._cards ._card ._card-body:hover {
   cursor: pointer;
 }
 
-main ._cards ._card ._card-body img {
+main ._cards ._card ._card-body ._image {
   width: 275px;
   height: 225px;
   border-radius: 5px;
@@ -235,5 +236,73 @@ main ._cards ._card ._card-details span {
 ._modal .fa-times:hover {
   cursor: pointer;
   color: #F2F1F4;
+}
+
+._modal ._modal-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 750px;
+  width: 750px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+._modal ._modal-content header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+._modal ._modal-content header .fa-user-circle {
+  font-size: 36px;
+}
+
+._modal ._modal-content header ._title {
+  position: relative;
+  bottom: 5px;
+  margin-left: 10px;
+}
+
+._modal ._modal-content header ._title h3 {
+  margin: 0;
+}
+
+._modal ._modal-content header ._title span {
+  position: relative;
+  bottom: 3px;
+  font-size: 14px;
+}
+
+._modal ._modal-content header ._actions.-group {
+  position: absolute;
+  padding-right: 20px;
+  right: 0;
+}
+
+._modal ._modal-content header ._actions.-group ._button {
+  margin: 0 5px;
+  color: #000;
+}
+
+._modal ._modal-content header ._actions.-group ._button:hover {
+  background-color: #d8d8dc;
+}
+
+._modal ._modal-content section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+._modal ._modal-content section ._image {
+  margin: 10px auto 0;
+  height: 600px;
+  width: 600px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */

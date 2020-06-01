@@ -20,6 +20,8 @@ $dribbble-pink: #ea4c89;
 $light-grey: #F2F1F4;
 $dark-grey: #6e6d7a;
 $border-grey: #d2dbde;
+$standard-button-color: #f3f3f4;
+$hover-standard-button: darken($standard-button-color, 10%);
 $black: #000;
 $white: #fff;
 
@@ -31,6 +33,7 @@ $white: #fff;
     color: $white;
     border: 0;
     font-size: 14px;
+    background-color: $standard-button-color;
     // primary
     &.-primary {
         background-color: $dribbble-pink;
@@ -150,7 +153,7 @@ main {
                 &:hover {
                     cursor: pointer;
                 }
-                img {
+                ._image {
                     width: 275px;
                     height: 225px;
                     border-radius: 5px;
@@ -194,6 +197,54 @@ main {
         &:hover {
             cursor: pointer;
             color: $light-grey;
+        }
+    }
+    ._modal-content {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 750px;
+        width: 750px;
+        background-color: $white;
+        border-radius: 5px;
+        header {
+            position: relative;
+            display: flex;
+            padding: 20px;
+            .fa-user-circle { font-size: 36px; }
+            ._title {
+                position: relative;
+                bottom: 5px;
+                margin-left: 10px;
+                h3 { margin: 0; }
+                span { 
+                    position: relative;
+                    bottom: 3px;
+                    font-size: 14px; 
+                }
+            }
+            ._actions.-group {
+                position: absolute;
+                padding-right: 20px;
+                right: 0;
+                ._button {
+                    margin: 0 5px;
+                    color: $black;
+                    &:hover {
+                        background-color: $hover-standard-button;
+                    }
+                }
+            }
+        }
+        section {
+            display: flex;
+            ._image {
+                margin: 10px auto 0;
+                height: 600px;
+                width: 600px;
+                border-radius: 5px;
+            }
         }
     }
 }
