@@ -17,9 +17,9 @@ Promise.all([
     const cards = document.querySelector("._cards");
 
     for (let i = 0; i < data[0].length; i++) {
-        cards.innerHTML += `<div id="${[i]}" class="_card">
+        cards.innerHTML += `<div class="_card">
         <div class="_card-body">
-            <img class="_image" src=${images[i].url} />
+            <img id="${[i]}" class="_image" src=${images[i].url} />
         </div>
         <div class="_card-details">
             <div class="_user">
@@ -43,14 +43,19 @@ Promise.all([
         }
     })
 
-    // click 'x' to close modal
+    // click 'x' or anywhere outside of modal content to close modal
     const closeModal = modal.querySelector(".fa-times");
-
+   
     closeModal.addEventListener("click", function() {
         modal.classList.remove("-open");
     })
 
-    // click left or right arrows to slide between cards in modal view
+    modal.addEventListener("click", function(event) {
+        let elementClicked = event.target;
 
+        if (elementClicked.className === "_modal -open") {
+            modal.classList.remove("-open");
+        }
+    })
 })
 

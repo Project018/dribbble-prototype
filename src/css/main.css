@@ -229,14 +229,32 @@ main ._cards ._card ._card-details span {
 }
 
 ._modal .fa-times {
-  position: absolute;
   right: 0;
   margin: 20px 20px 0 0;
+}
+
+._modal .fa-chevron-left {
+  top: 50%;
+  margin-left: 10px;
+}
+
+._modal .fa-chevron-right {
+  top: 50%;
+  right: 0;
+  margin-right: 10px;
+}
+
+._modal .fa-times,
+._modal .fa-chevron-left,
+._modal .fa-chevron-right {
+  position: absolute;
   color: #6e6d7a;
   font-size: 30px;
 }
 
-._modal .fa-times:hover {
+._modal .fa-times:hover,
+._modal .fa-chevron-left:hover,
+._modal .fa-chevron-right:hover {
   cursor: pointer;
   color: #F2F1F4;
 }
