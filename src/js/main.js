@@ -4,7 +4,9 @@ Promise.all([
     fetch("https://jsonplaceholder.typicode.com/photos").then(response => response.json()),
     { 
         mode: 'no-cors',
+        method: 'GET',
         header: {
+            'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
         }
     }
@@ -40,6 +42,7 @@ Promise.all([
         if (elementClicked.className === "_image") {
             modal.classList.add("-open");
             modalShot.innerHTML = elementClicked.parentNode.innerHTML;
+            modal.setAttribute("aria-modal", true);
         }
     })
 
@@ -48,6 +51,7 @@ Promise.all([
    
     closeModal.addEventListener("click", function() {
         modal.classList.remove("-open");
+        modal.setAttribute("aria-modal", false);
     })
 
     modal.addEventListener("click", function(event) {
@@ -55,7 +59,23 @@ Promise.all([
 
         if (elementClicked.className === "_modal -open") {
             modal.classList.remove("-open");
+            modal.setAttribute("aria-modal", false);
         }
     })
+
+    // filter cards via toolbar click
+    const ulFilters = document.querySelector("._filters");
+    const filters = ulFilters.children;
+    
+    for (let i = 0; i < filters.length; i++) {
+        filters[i].addEventListener("click", (event) => {
+            for (let i = 0; i < filters.length; i++) {
+                filters[i].classList.remove("-active");
+            }
+            
+            let elementClicked = event.target;
+            elementClicked.classList.add('-active');
+        })
+    }
 })
 
