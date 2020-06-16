@@ -70,11 +70,16 @@ Promise.all([
     for (let i = 0; i < filters.length; i++) {
         filters[i].addEventListener("click", (event) => {
             for (let i = 0; i < filters.length; i++) {
+                // once listitem clicked remove classname and aria role attribute
                 filters[i].classList.remove("-active");
+                filters[i].removeAttribute("aria-current");
             }
             
             let elementClicked = event.target;
             elementClicked.classList.add('-active');
+
+            // set aria role current on clicked listitem
+            elementClicked.setAttribute("aria-current", true);
             
             // start off with empty cards html
             cards.innerHTML = '';
