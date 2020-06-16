@@ -75,6 +75,144 @@ Promise.all([
             
             let elementClicked = event.target;
             elementClicked.classList.add('-active');
+            
+            // start off with empty cards html
+            cards.innerHTML = '';
+
+            // All
+            for (let i = 0; i < data[0].length; i++) {
+                cards.innerHTML += `<div class="_card">
+                    <div class="_card-body">
+                        <img id="${[i]}" class="_image" src=${images[i].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][i].username}</span>
+                        </div>
+                    </div>
+                </div> `
+            }
+
+            // Animation
+            if (elementClicked.innerHTML === 'Animation') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="1" class="_image" src=${images[0].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][0].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }
+
+            // Branding
+            if (elementClicked.innerHTML === 'Branding') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="2" class="_image" src=${images[1].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][1].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }
+
+            // Illustration
+            if (elementClicked.innerHTML === 'Illustration') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="3" class="_image" src=${images[4].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][4].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }
+
+            // Mobile
+            if (elementClicked.innerHTML === 'Mobile') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="8" class="_image" src=${images[9].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][9].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }
+
+            // Print
+            if (elementClicked.innerHTML === 'Print') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="4" class="_image" src=${images[5].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][5].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }
+
+            // Product Design
+            if (elementClicked.innerHTML === 'Product Design') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="1" class="_image" src=${images[2].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][2].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }
+
+            // Typography
+            if (elementClicked.innerHTML === 'Typography') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="5" class="_image" src=${images[6].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][6].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }
+
+            // Web Design
+            if (elementClicked.innerHTML === 'Web Design') {
+                cards.innerHTML = `<div class="_card">
+                    <div class="_card-body">
+                        <img id="7" class="_image" src=${images[8].url} />
+                    </div>
+                    <div class="_card-details">
+                        <div class="_user">
+                            <i class="fas fa-user-circle"></i>
+                            <span>${data[0][8].username}</span>
+                        </div>
+                    </div>
+                </div> ` 
+            }    
         })
     }
 })
